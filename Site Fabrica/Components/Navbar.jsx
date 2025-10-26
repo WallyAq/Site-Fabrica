@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,34 +18,29 @@ export default function Navbar() {
         {/* Menu de navegação */}
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
-            <a href="#home" className="navbar-link" onClick={closeMenu}>
+            <Link to="/" className="navbar-link" onClick={closeMenu}>
               Início
-            </a>
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link" onClick={closeMenu}>
-              Sobre
-            </a>
+            <Link to="/artigos" className="navbar-link" onClick={closeMenu}>
+              Artigos
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#objectives" className="navbar-link" onClick={closeMenu}>
-              Objetivos
-            </a>
+            <Link to="/cursos" className="navbar-link" onClick={closeMenu}>
+              Cursos
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#performance" className="navbar-link" onClick={closeMenu}>
-              Performance
-            </a>
+            <Link to="/eventos" className="navbar-link" onClick={closeMenu}>
+              Eventos
+            </Link>
           </li>
           <li className="navbar-item">
-            <a href="#team" className="navbar-link" onClick={closeMenu}>
-              Equipe
-            </a>
-          </li>
-          <li className="navbar-item">
-            <a href="#contact" className="navbar-link" onClick={closeMenu}>
-              Contato
-            </a>
+            <Link to="/servicos" className="navbar-link" onClick={closeMenu}>
+              Serviços
+            </Link>
           </li>
         </ul>
 

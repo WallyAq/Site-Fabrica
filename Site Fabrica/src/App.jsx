@@ -1,22 +1,23 @@
+import React from "react";
 import "./App.css";
-import Navbar from "../Components/Navbar";
-import Header from "../Components/Header";
-import Info from "../Components/Info";
-import Objectives from "../Components/Objectives";
-import Performance from "../Components/Performance";
-import Team from "../Components/Team";
-import Footer from "../Components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "../pages/home";
+import Artigos from "../pages/artigos";
+import Cursos from "../pages/cursos";
+import Eventos from "../pages/eventos";
+import Servico from "../pages/servico";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Header />
-      <Info />
-      <Objectives />
-      <Performance />
-      <Team />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/artigos" element={<Artigos />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/eventos" element={<Eventos />} />
+        <Route path="/servicos" element={<Servico />} />
+        <Route path="*" element={<h2>Página não encontrada</h2>} />
+      </Routes>
     </>
   );
 }

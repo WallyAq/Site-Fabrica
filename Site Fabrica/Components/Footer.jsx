@@ -61,6 +61,11 @@ export default function Footer() {
                     <img src="/Site-Fabrica/detic.png" alt="DETIC" className="partner-logo" />
                   </a>
                 </div>
+                <div className="partner-item">
+                  <a href="https://www.uece.br/proex/" target="_blank" rel="noopener noreferrer">
+                    <img src="/Site-Fabrica/PROEX.png" alt="PROEX" className="partner-logo" />
+                  </a>
+                </div>
               </div>
             </div>
 
