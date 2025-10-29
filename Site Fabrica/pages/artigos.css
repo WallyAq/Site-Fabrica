@@ -46,7 +46,6 @@
   line-height: 1.5;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .artigos-container {
     padding: 1rem;
