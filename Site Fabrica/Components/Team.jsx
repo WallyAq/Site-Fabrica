@@ -13,12 +13,10 @@ export default function Team() {
     let intervalId;
 
     const startAutoScroll = () => {
-      // No mobile, o scroll acontece no container, no desktop no grid
       
       let scrollAmount = 0;
       
       const autoScroll = () => {
-        // Detecta se é mobile baseado na largura da tela atual
         const isMobile = window.innerWidth <= 768;
         const currentScrollElement = isMobile ? container : carousel;
         const totalCards = 7;
@@ -62,11 +60,11 @@ export default function Team() {
     };
 
     const handleResize = () => {
-      // Limpa o interval anterior e reinicia com as novas dimensões
+     
       if (intervalId) {
         clearInterval(intervalId);
       }
-      // Pequeno delay para evitar múltiplas execuções durante o resize
+    
       setTimeout(startAutoScroll, 100);
     };
 

@@ -3,14 +3,14 @@ import "./Header.css";
 export default function Header() {
   return (
     <header id="home" className="header">
-      {/* Background */}
+      
       <img src="/Site-Fabrica/Background.jpg" alt="Background" className="header-bg" />
       <div className="header-overlay"></div>
 
-      {/* Container */}
+      
       <div className="header-container">
         
-        {/* Logos institucionais */}
+      
         <div className="institution-logos-container">
           <div className="institution-logos">
             <a href="https://www.uece.br/" target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Conteúdo principal */}
+        
         <div className="hero-section">
           <div className="logo-section">
             <img src="/Site-Fabrica/logo_fabrica-removebg-preview.png" alt="Fábrica de Testadores" className="main-logo" />

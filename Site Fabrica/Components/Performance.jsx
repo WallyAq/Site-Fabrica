@@ -13,35 +13,30 @@ export default function Performance() {
     let intervalId;
 
     const startAutoScroll = () => {
-      // No mobile, o scroll acontece no container, no desktop no grid
       
       let scrollAmount = 0;
       const totalCards = 4;
 
       const autoScroll = () => {
-        // Verifica novamente se ainda é mobile para evitar problemas
         const currentIsMobile = window.innerWidth <= 768;
         const currentScrollElement = currentIsMobile ? container : carousel;
         
         if (currentIsMobile) {
-          // Mobile: mostra um card por vez, centralizado
           const containerWidth = currentScrollElement.offsetWidth;
-          const cardWidth = 300; // largura do card no mobile
-          const gap = 32; // 2rem gap
+          const cardWidth = 300; 
+          const gap = 32; 
           
-          // Calcula qual card está sendo mostrado atualmente
+
           const currentCardIndex = Math.round(scrollAmount / (cardWidth + gap));
           const nextCardIndex = (currentCardIndex + 1) % totalCards;
           
-          // Centraliza o próximo card
+
           const cardCenterOffset = (containerWidth - cardWidth) / 2;
           scrollAmount = nextCardIndex * (cardWidth + gap) - cardCenterOffset;
           
-          // Garante que o scroll não seja negativo
           if (scrollAmount < 0) scrollAmount = 0;
           
         } else {
-          // Desktop: lógica original
           const cardWidth = 320;
           scrollAmount += cardWidth;
           
@@ -66,14 +61,12 @@ export default function Performance() {
       if (intervalId) {
         clearInterval(intervalId);
       }
-      // Pequeno delay para evitar múltiplas execuções durante o resize
       setTimeout(startAutoScroll, 100);
     };
 
-    // Inicia o auto scroll
+    // auto scroll
     startAutoScroll();
 
-    // Adiciona listener para resize
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -88,7 +81,6 @@ export default function Performance() {
       <div className="performance-container">
         <div className="performance-carousel-container" ref={containerRef}>
           <div className="performance-grid" ref={performanceCarouselRef}>
-          {/* Card 1 - Pessoas Impactadas */}
           <div className="performance-card">
             <div className="card-icon">
               <div className="icon-group">
@@ -106,7 +98,7 @@ export default function Performance() {
             </div>
           </div>
 
-          {/* Card 2 - Softwares Impactados */}
+          
           <div className="performance-card">
             <div className="card-icon">
               <div className="laptop-icon">
@@ -123,7 +115,7 @@ export default function Performance() {
             </div>
           </div>
 
-          {/* Card 3 - Projetos Realizados */}
+          
           <div className="performance-card">
             <div className="card-icon">
               <div className="project-icon">
@@ -140,8 +132,7 @@ export default function Performance() {
               <div className="card-number">05</div>
             </div>
           </div>
-
-          {/* Card 4 - Cursos Oferecidos */}
+        
           <div className="performance-card">
             <div className="card-icon">
               <div className="course-icon">

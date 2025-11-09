@@ -7,7 +7,6 @@ export default function Contacts() {
         <h1 className="contacts-title">CONTATOS</h1>
 
         <div className="contacts-content">
-          {/* Seção de Email */}
           <div className="contact-item">
             <div className="contact-icon email-icon">
               <svg
@@ -34,7 +33,6 @@ export default function Contacts() {
             </div>
           </div>
 
-          {/* Seção de Endereço */}
           <div className="contact-item">
             <div className="contact-icon location-icon">
               <svg

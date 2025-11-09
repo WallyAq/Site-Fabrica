@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        {/* Menu de navegação */}
+        
         <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
             <Link to="/" className="navbar-link" onClick={closeMenu}>
@@ -25,11 +25,6 @@ export default function Navbar() {
           <li className="navbar-item">
             <Link to="/artigos" className="navbar-link" onClick={closeMenu}>
               Artigos
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/cursos" className="navbar-link" onClick={closeMenu}>
-              Cursos
             </Link>
           </li>
           <li className="navbar-item">
@@ -44,7 +39,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Menu hamburger para mobile */}
+        
         <div
           className={`navbar-hamburger ${isMenuOpen ? "active" : ""}`}
           onClick={toggleMenu}
