@@ -22,24 +22,20 @@ export default function Team() {
         const totalCards = 7;
         
         if (isMobile) {
-          // Mobile: mostra um card por vez, centralizado
           const containerWidth = currentScrollElement.offsetWidth;
           const cardWidth = 280; // largura do card no mobile
           const gap = 24; // 1.5rem gap
           
-          // Calcula qual card está sendo mostrado atualmente
           const currentCardIndex = Math.round(scrollAmount / (cardWidth + gap));
           const nextCardIndex = (currentCardIndex + 1) % totalCards;
           
-          // Centraliza o próximo card
+  
           const cardCenterOffset = (containerWidth - cardWidth) / 2;
           scrollAmount = nextCardIndex * (cardWidth + gap) - cardCenterOffset;
           
-          // Garante que o scroll não seja negativo
           if (scrollAmount < 0) scrollAmount = 0;
           
-        } else {
-          // Desktop: lógica original  
+        } else {  
           const cardWidth = 280;
           scrollAmount += cardWidth;
           
@@ -55,7 +51,6 @@ export default function Team() {
         });
       };
 
-      // Auto scroll a cada 3 segundos
       intervalId = setInterval(autoScroll, 3000);
     };
 
@@ -68,10 +63,8 @@ export default function Team() {
       setTimeout(startAutoScroll, 100);
     };
 
-    // Inicia o auto scroll
     startAutoScroll();
 
-    // Adiciona listener para resize
     window.addEventListener('resize', handleResize);
 
     return () => {
